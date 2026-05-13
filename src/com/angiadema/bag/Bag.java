@@ -39,5 +39,10 @@ public class Bag<T> {
 		}
 		return totalDupItem;
 	}
+	
+	// Print bag items
+	public void printBagContents() {
+		System.out.println(items);
+	}
 
 }
