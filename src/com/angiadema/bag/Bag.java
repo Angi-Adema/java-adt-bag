@@ -19,17 +19,17 @@ public class Bag<T> {
 	}
 	
 	// Remove one occurrence of the item from bag
-	void remove(T item) {
+	public void remove(T item) {
 		items.remove(item);
 	}
 	
 	// Return true or false if the item exists
-	boolean contains(T item) {
+	public boolean contains(T item) {
 		return items.contains(item);
 	}
 	
 	// Return the number of occurrences of an item
-	int count(T item) {
+	public int count(T item) {
 		
 		// Variable to hold the number item appears in bag
 		int totalDupItem = 0;
