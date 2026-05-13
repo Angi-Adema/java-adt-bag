@@ -5,43 +5,64 @@ public class Main {
 	public static void main(String[] args) {
 		
 		// Instantiate a new Bag object
-		Bag<String> shoppingCart = new Bag<>();
+		Bag<String> basket = new Bag<>();
 		
 		// Add items including duplicates to the bag
-		shoppingCart.add("Jelly Beans");
-		shoppingCart.add("Chocolate Bar");
-		shoppingCart.add("Atomic Fire Ball");
-		shoppingCart.add("Chocolate Bar");
-		shoppingCart.add("Atomic Fire Ball");
-		shoppingCart.add("Atomic Fire Ball");
-		shoppingCart.add("Jelly Beans");
-		shoppingCart.add("Gummy Bears");
+		basket.add("Jelly Beans");
+		basket.add("Chocolate Bar");
+		basket.add("Atomic Fire Ball");
+		basket.add("Chocolate Bar");
+		basket.add("Atomic Fire Ball");
+		basket.add("Atomic Fire Ball");
+		basket.add("Jelly Beans");
+		basket.add("Gummy Bears");
 		
 		// Call printBagContents() to print items in Bag
-		System.out.println("Items currently in shopping cart:");
-		shoppingCart.printBagContents();
+		System.out.println("Items currently in basket:");
+		basket.printBagContents();
+		
+		// Empty line for console formatting
+		System.out.println();
 		
 		// Test the contains() method for specific items
-		System.out.println("\nDoes the shopping cart contain jelly beans? " + shoppingCart.contains("Jelly Beans"));
-        System.out.println("Does the shopping cart contain cinnamon dots? " + shoppingCart.contains("Cinnamon Dots"));
-        System.out.println("Does the shopping cart contain gummy bears? " + shoppingCart.contains("Gummy Bears"));
+		System.out.println("Does the basket contain jelly beans?");
+		basket.contains("Jelly Beans");
+		
+        System.out.println("\nDoes the basket contain cinnamon dots?");
+        basket.contains("Cinnamon Dots");
+        
+        System.out.println("\nDoes the basket contain gummy bears?");
+        basket.contains("Gummy Bears");
+        
+        // Empty Line for console formatting
+        System.out.println();
         
         // Test the count() method
-        System.out.println("\nHow many jelly beans are there? " + shoppingCart.count("Jelly Beans"));
-        System.out.println("How many gummy bears are there? " + shoppingCart.count("Gummy Bears"));
-        System.out.println("How many atomic fire balls are there? " + shoppingCart.count("Atomic Fire Ball"));
+        System.out.println("How many jelly beans are there?");
+        basket.count("Jelly Beans");
+        
+        System.out.println("\nHow many gummy bears are there?"); 
+        basket.count("Gummy Bears");
+        
+        System.out.println("\nHow many atomic fire balls are there?");
+        basket.count("Atomic Fire Ball");
         
         // Remove an element and print new contents
-        shoppingCart.remove("Gummy Bears");
+        basket.remove("Gummy Bears");
         
-        System.out.println("\nContents of the shopping cart after removing gummy bears:");
-        shoppingCart.printBagContents();
+        // Empty Line for console formatting
+        System.out.println();
+        
+        System.out.println("Contents of the basket after removing gummy bears:");
+        basket.printBagContents();
         
         // Test the contains() method for the removed item
-        System.out.println("\nDoes the shopping cart contain gummy bears? " + shoppingCart.contains("Gummy Bears"));
+        System.out.println("\nDoes the basket contain gummy bears?");
+        basket.contains("Gummy Bears");
         
         // Test the count() method for the removed item
-        System.out.println("\nHow many gummy bears are there? " + shoppingCart.count("Gummy Bears"));
+        System.out.println("\nHow many gummy bears are there?");
+        basket.count("Gummy Bears");
 	}
 
 }
