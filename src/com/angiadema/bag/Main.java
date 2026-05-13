@@ -22,8 +22,14 @@ public class Main {
 		shoppingCart.printBagContents();
 		
 		// Test the contains() method for specific items
-		shoppingCart.contains("Jelly Beans");
-
+		System.out.println("\nDoes the shopping cart contain jally beans? " + shoppingCart.contains("Jelly Beans"));
+        System.out.println("Does the shopping cart contain cinnamon dots? " + shoppingCart.contains("Cinnamon Dots"));
+        System.out.println("Does the shopping cart contain gummy bears? " + shoppingCart.contains("Gummy Bears"));
+        
+        // Test the count() method
+        System.out.println("\n How many jelly beans are there? " + shoppingCart.count("Jelly Beans"));
+        System.out.println("How many gummy bears are there? " + shoppingCart.count("Gummy Bears"));
+        System.out.println("How many atomic fire balls are there? " + shoppingCart.count("Atomic Fire Ball"));
 	}
 
 }
