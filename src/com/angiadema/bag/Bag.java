@@ -8,6 +8,11 @@ public class Bag<T> {
 	// ArrayList to hold bag items
 	private ArrayList<T> items;
 	
+	// Constructor to initialize the new Bag object
+	public Bag() {
+		items = new ArrayList<>();
+	}
+	
 	// Add item of type T to the bag
 	public void add(T item) {
 		items.add(item);
