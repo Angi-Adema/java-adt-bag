@@ -30,6 +30,18 @@ public class Main {
         System.out.println("\n How many jelly beans are there? " + shoppingCart.count("Jelly Beans"));
         System.out.println("How many gummy bears are there? " + shoppingCart.count("Gummy Bears"));
         System.out.println("How many atomic fire balls are there? " + shoppingCart.count("Atomic Fire Ball"));
+        
+        // Remove an element and print new contents
+        shoppingCart.remove("Gummy Bears");
+        
+        System.out.println("\nContents of the shopping cart after removing a gummy bears:");
+        shoppingCart.printBagContents();
+        
+        // Test the contains() method for the removed item
+        System.out.println("\nDoes the shopping cart contain gummy bears? " + shoppingCart.contains("Gummy Bears"));
+        
+        // Test the count() method for the removed item
+        System.out.println("\nHow may gummy bears are there? " + shoppingCart.count("Gummy Bears"));
 	}
 
 }
