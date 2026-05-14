@@ -7,62 +7,71 @@ public class Main {
 		// Instantiate a new Bag object
 		Bag<String> basket = new Bag<>();
 		
-		// Add items including duplicates to the bag
-		basket.add("Jelly Beans");
-		basket.add("Chocolate Bar");
-		basket.add("Atomic Fire Ball");
-		basket.add("Chocolate Bar");
-		basket.add("Atomic Fire Ball");
-		basket.add("Atomic Fire Ball");
-		basket.add("Jelly Beans");
-		basket.add("Gummy Bears");
+		// Create an array to hold items
+		String[] candy = {
+				"Jelly Beans", 
+				"Chocolate Bar", 
+				"Atomic Fire Ball",
+				"Chocolate Bar",
+				"Atomic Fire Ball",
+				"Atomic Fire Ball",
+				"Jelly Beans",
+				"Gummy Bears"
+		};
 		
-		// Call printBagContents() to print items in Bag
-		System.out.println("Items currently in basket:");
+		// Loop through the candy array to add the items to the basket
+		for (String element : candy) {
+			basket.add(element);
+		}
+		
+		// Print the items in the bag
+		System.out.println("Items in the basket are: ");
 		basket.printBagContents();
 		
-		// Empty line for console formatting
-		System.out.println();
+		// Create an array of items to test contains() method
+		String[] itemsTest = {
+				"Jelly Beans",
+				"Cinnamon Dots",
+				"Gummy Bears"
+		};
 		
-		// Test the contains() method for specific items
-		System.out.println("Does the basket contain jelly beans?");
-		basket.contains("Jelly Beans");
+		// Print statement before running contains test
+		System.out.println("\nDoes the basket contain these items?");
 		
-        System.out.println("\nDoes the basket contain cinnamon dots?");
-        basket.contains("Cinnamon Dots");
-        
-        System.out.println("\nDoes the basket contain gummy bears?");
-        basket.contains("Gummy Bears");
-        
-        // Empty Line for console formatting
-        System.out.println();
-        
-        // Test the count() method
-        System.out.println("How many jelly beans are there?");
-        basket.count("Jelly Beans");
-        
-        System.out.println("\nHow many gummy bears are there?"); 
-        basket.count("Gummy Bears");
-        
-        System.out.println("\nHow many atomic fire balls are there?");
-        basket.count("Atomic Fire Ball");
+		// Loop through itemsTest and compare each element with items in basket
+		for (String element : itemsTest) {
+			System.out.println(element + ": " + basket.contains(element));
+		}
+		
+		// Create a list of items to get quantity of
+		String[] quantity = {
+				"Jelly Beans",
+				"Gummy Bears",
+				"Atomic Fire Ball"
+		};
+		
+		// Print statement before running the count test
+		System.out.println("\nThe quantity of the selected items are:");
+		
+		// Loop through the quantity array calling .count to get quantity of each item
+		for (String element : quantity) {
+			System.out.println(element + ": " + basket.count(element));
+		}
         
         // Remove an element and print new contents
-        basket.remove("Gummy Bears");
+        basket.remove("Atomic Fire Ball");
         
-        // Empty Line for console formatting
-        System.out.println();
+		// Print the items in the bag
+		System.out.println("\nThe updated basket now has: ");
+		basket.printBagContents();
         
-        System.out.println("Contents of the basket after removing gummy bears:");
-        basket.printBagContents();
+        // Test contains() after removing quantity of 1 of specified item
+        System.out.println("\nDoes the basket contain Atomic Fire Ball?");
+        System.out.println(basket.contains("Atomic Fire Ball"));
         
-        // Test the contains() method for the removed item
-        System.out.println("\nDoes the basket contain gummy bears?");
-        basket.contains("Gummy Bears");
-        
-        // Test the count() method for the removed item
-        System.out.println("\nHow many gummy bears are there?");
-        basket.count("Gummy Bears");
+        // Test the count() method to confirm quantity of one item removed
+        System.out.println("\nHow many Atomic Fire Balls are there?");
+        System.out.println(basket.count("Atomic Fire Ball"));
 	}
 
 }

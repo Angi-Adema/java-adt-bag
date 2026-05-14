@@ -34,7 +34,7 @@ public class Bag<T> {
 		// Variable to hold the number item appears in bag
 		int totalDupItem = 0;
 		
-		// Loop through the items array to get total
+		// Loop through the items arraylist to get total
 		for (T currentVal : items) {
 			
 			// Compare current value with item, add if the same
@@ -45,7 +45,7 @@ public class Bag<T> {
 		return totalDupItem;
 	}
 	
-	// Print bag items
+	// ArrayList is set to private, print method to print contents
 	public void printBagContents() {
 		System.out.println(items);
 	}
