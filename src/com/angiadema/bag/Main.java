@@ -98,7 +98,10 @@ public class Main {
         		"Pearl Earrings",
         		"Emerald Ring",
         		"Diamond Pendant",
-        		"Multistone Pin"	
+        		"Multistone Pin",
+        		"Pearl Necklace",
+        		"Sapphire Pendant",
+        		"Ruby Earrings"
         };
         
         // Loop through clothing array and add items to clothingShoppingBag
@@ -110,6 +113,11 @@ public class Main {
         for (String item : jewelry) {
         	jewelryShoppingBag.add(item);
         }
+        
+        // Print the size of each bag using the size method
+        System.out.println("\nThe size of the clothing bag is: " + clothingShoppingBag.size());
+        System.out.println("\nThe size of the jewelry bag is: " + jewelryShoppingBag.size());
+        
         
         
 	}
