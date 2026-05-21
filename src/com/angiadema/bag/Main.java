@@ -73,6 +73,9 @@ public class Main {
         System.out.println("\nHow many Atomic Fire Balls are there?");
         System.out.println(basket.count("Atomic Fire Ball"));
         
+        // Separate Module 1 Critical Thinking from Module 2 Critical Thinking
+        System.out.println("\n*_____________________________________Module 2_______________________________________*");
+        
         // Create two instances of a bag object
         Bag<String> clothingShoppingBag = new Bag<>();
         Bag<String> jewelryShoppingBag = new Bag<>();
@@ -118,7 +121,11 @@ public class Main {
         System.out.println("\nThe size of the clothing bag is: " + clothingShoppingBag.size());
         System.out.println("\nThe size of the jewelry bag is: " + jewelryShoppingBag.size());
         
+        // Merge the two Bag objects together using merge method
+        clothingShoppingBag.merge(jewelryShoppingBag);
         
+        // Print the merged shopping bags
+        System.out.println("\nShopping bags combined into one bag: " + clothingShoppingBag);
         
 	}
 
