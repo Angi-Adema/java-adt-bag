@@ -72,6 +72,46 @@ public class Main {
         // Test the count() method to confirm quantity of one item removed
         System.out.println("\nHow many Atomic Fire Balls are there?");
         System.out.println(basket.count("Atomic Fire Ball"));
+        
+        // Create two instances of a bag object
+        Bag<String> clothingShoppingBag = new Bag<>();
+        Bag<String> jewelryShoppingBag = new Bag<>();
+        
+        // Clothing array
+        String[] clothing = {
+        		"T-Shirt", 
+        		"Jeans", 
+        		"T-Shirt", 
+        		"Dress", 
+        		"Dress", 
+        		"Blouse",
+        		"Sweater",
+        		"Scarf"
+        };
+        
+        // Jewelry array
+        String[] jewelry = { 
+        		"Pearl Necklace",
+        		"Pearl Earrings",
+        		"Diamond Pendant",
+        		"Tennis Bracelet",
+        		"Pearl Earrings",
+        		"Emerald Ring",
+        		"Diamond Pendant",
+        		"Multistone Pin"	
+        };
+        
+        // Loop through clothing array and add items to clothingShoppingBag
+        for (String item : clothing) {
+        	clothingShoppingBag.add(item);
+        }
+        
+        // Loop through jewelry array and add items to jewelryShoppingBag
+        for (String item : jewelry) {
+        	jewelryShoppingBag.add(item);
+        }
+        
+        
 	}
 
 }
