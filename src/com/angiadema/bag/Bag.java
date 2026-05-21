@@ -45,6 +45,35 @@ public class Bag<T> {
 		return totalDupItem;
 	}
 	
+	// Return the total number of items in the bag including duplicates
+	public int size() {
+		return items.size();
+	}
+	
+	// Merge bags together
+	public void merge(Bag<T> otherBag) {
+		
+		// Loop through otherBag and add items to current items ArrayList
+		for (T item : otherBag.items) {
+			items.add(item);
+		}
+	}
+	
+	// Method to print only the item names and not the quantities
+	public Bag<T> distinct() {
+		
+		// Create a new Bag object for the distinct list
+		Bag<T> distinctItems = new Bag<>();
+		
+		// Loop through items in current bag and add to new bag if not already there
+		for (int i = 0; i < items.size(); i++) {
+			if (!distinctItems.contains(items.get(i))) {
+				distinctItems.add(items.get(i));
+			}
+		}
+		return distinctItems;
+	}
+	
 	// ArrayList is set to private, print method to print contents
 	public void printBagContents() {
 		System.out.println(items);
