@@ -128,9 +128,10 @@ public class Main {
         System.out.println("\nShopping bags combined into one bag:");
         clothingShoppingBag.printBagContents();
         
-        // Create a new distinct bag calling the distinct() method
+        // Create a new distinct bag calling the distinct() method and print contents
+        Bag<String> distinctShoppingBag = clothingShoppingBag.distinct();
         System.out.println("\nItems in the new distinct shopping bag are:");
-        clothingShoppingBag.distinct().printBagContents();
+        distinctShoppingBag.printBagContents();
         
 	}
 
