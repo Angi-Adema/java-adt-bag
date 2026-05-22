@@ -125,7 +125,12 @@ public class Main {
         clothingShoppingBag.merge(jewelryShoppingBag);
         
         // Print the merged shopping bags
-        System.out.println("\nShopping bags combined into one bag: " + clothingShoppingBag);
+        System.out.println("\nShopping bags combined into one bag:");
+        clothingShoppingBag.printBagContents();
+        
+        // Create a new distinct bag calling the distinct() method
+        System.out.println("\nItems in the new distinct shopping bag are:");
+        clothingShoppingBag.distinct().printBagContents();
         
 	}
 
