@@ -1,6 +1,7 @@
 package com.angiadema.bag;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.Set;
 
 // Implement a Bag class with generic type
