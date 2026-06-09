@@ -2,10 +2,11 @@ package com.angiadema.bag;
 
 import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.Iterator;
 import java.util.Set;
 
-// Implement a Bag class with generic type
-public class Bag<T> {
+// REFACTORED: Create a Bag class implementing iterable with generic type
+public class Bag<T> implements Iterable<T> {
 	
 	// ArrayList to hold bag items
 	private ArrayList<T> items;
@@ -13,6 +14,12 @@ public class Bag<T> {
 	// Constructor to initialize the new Bag object
 	public Bag() {
 		items = new ArrayList<>();
+	}
+	
+	// ADDED: Override Iterator
+	@Override
+	public Iterator<T> iterator() {
+		return items.iterator();
 	}
 	
 	// Add item of type T to the bag
@@ -56,7 +63,8 @@ public class Bag<T> {
 	public void merge(Bag<T> otherBag) {
 		
 		// Loop through otherBag and add items to current items ArrayList
-		for (T item : otherBag.items) {
+		// REFACTORED: Since implemented Iterable, do not need otherBag.items
+		for (T item : otherBag) {
 			items.add(item);
 		}
 	}
